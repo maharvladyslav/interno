@@ -1,0 +1,43 @@
+.statistics {
+  background-color: $colorBgPrimary;
+  height: 475px;
+}
+.statistics-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  height: 475px;
+  align-items: center;
+}
+.statistics-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 288px;
+  height: 195px;
+}
+
+.statistics-item {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: $colorAccent;
+    right: 0;
+  }
+}
+.statistics-title {
+  font-family: $fontSecondary;
+  font-size: 85px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: $colorAccent;
+}
+.statistics-text {
+  font-family: $fontPrimary;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: $colorTextPrimary;
+}
