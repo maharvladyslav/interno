@@ -1,0 +1,15 @@
+footer {
+  font-family: $fontPrimary;
+  color: $colorTextPrimary;
+}
+
+.footer-pages-title,
+.footer-explore-title,
+.footer-contact-title {
+  font-family: $fontSecondary;
+  color: $colorTextTitle;
+}
+.footer-copyright-webflow,
+.footer-copyright-victorflow {
+  color: $colorAccent;
+}
