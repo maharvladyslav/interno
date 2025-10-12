@@ -1,0 +1,60 @@
+// mobile and tablet-------------------
+.fields {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+.fields__label {
+  color: $colorTextTitle;
+}
+.fields__content {
+  max-height: 40px;
+  max-width: 370px;
+  padding: 11px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  transition-property: border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+.fields__content:hover .fields__icon,
+.fields__content:hover,
+.fields__content:focus-within .fields__icon,
+.fields__content:focus-within {
+  cursor: pointer;
+  fill: $colorAccent;
+  border-color: $colorAccent;
+}
+.comment__field {
+  padding: 12px 16px;
+}
+.fields__input {
+  min-width: 90%;
+}
+.fields__content--comment {
+  max-height: 120px;
+}
+.fields__comment {
+  min-height: 96px;
+}
+.fields__icon {
+  width: 20px;
+  height: 20px;
+  fill: $colorTextTitle;
+  transition-property: fill;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+// desktop-------------------
+@media screen and (min-width: 1024px) {
+  .fields__content {
+    min-width: 448px;
+  }
+  .fields__input {
+    min-width: 90%;
+  }
+}
