@@ -1,0 +1,17 @@
+.contact__container {
+  background-color: $colorTextTitle;
+  border-radius: 70px;
+}
+.contact__title {
+  font-family: $fontSecondary;
+  font-size: 50px;
+  color: $colorTextContrast;
+}
+.contact__subtext {
+  color: $colorTextContrast;
+}
+.contact__button {
+  font-size: 18px;
+  color: $colorTextContrast;
+  background-color: $colorAccent;
+}
