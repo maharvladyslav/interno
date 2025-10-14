@@ -1,3 +1,15 @@
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .advantages__title {
   font-family: $fontSecondary;
   font-size: 25px;
@@ -5,15 +17,37 @@
   letter-spacing: 0.22px;
   text-align: center;
   color: $colorTextTitle;
+  margin-bottom: 17px;
 }
 
 .advantages__text {
   text-align: center;
   letter-spacing: 0.22px;
+  margin-bottom: 48px;
 }
 
 .advantages__link {
   font-size: 18px;
-  text-align: center;
   letter-spacing: 0.36px;
+}
+
+.advantages__link::after {
+  content: "";
+  background-image: url(../img/arrow-right.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .advantages__item {
+    flex-basis: calc((100% - 50px) / 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .advantages__list {
+    flex-direction: row;
+    gap: 93px;
+  }
 }
