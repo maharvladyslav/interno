@@ -1,0 +1,136 @@
+.statistics {
+  background-color: $colorBgPrimary;
+}
+
+.statistics-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+}
+.statistics-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 195px;
+}
+/* ======= Mobile ======= */
+@media (max-width: 480px) {
+  .statistics-item {
+    width: 100%;
+    max-width: 288px;
+  }
+  .statistics-title {
+    font-size: 50px;
+  }
+  .statistics-text {
+    font-size: 14px;
+  }
+  .statistics-item:nth-child(-n + 3) {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $colorAccent;
+      bottom: -16px;
+    }
+  }
+}
+/* ====== Tablet ====== */
+@media (min-width: 480px) and (max-width: 768px) {
+  .statistics-item {
+    width: 45%;
+    min-width: 217px;
+  }
+  .statistics-title {
+    font-size: 70px;
+  }
+  .statistics-text {
+    font-size: 16px;
+  }
+  .statistics-item:nth-child(1) {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background-color: $colorAccent;
+      right: -8px;
+    }
+  }
+  .statistics-item:nth-child(2) {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $colorAccent;
+      bottom: -8px;
+    }
+  }
+  .statistics-item:nth-child(3) {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $colorAccent;
+      top: -8px;
+    }
+  }
+  .statistics-item:nth-child(4) {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background-color: $colorAccent;
+      left: -8px;
+    }
+  }
+}
+/* ======== Desktop ======= */
+@media (min-width: 768px) {
+  .statistics-item {
+    width: 22%;
+  }
+  .statistics-title {
+    font-size: 85px;
+  }
+  .statistics-text {
+    font-size: 18px;
+  }
+  .statistics-item:nth-child(-n + 3) {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background-color: $colorAccent;
+      right: 0;
+    }
+  }
+}
+
+.statistics-title {
+  font-family: $fontSecondary;
+  font-size: 85px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: $colorAccent;
+  font-weight: 200;
+}
+.statistics-text {
+  font-family: $fontPrimary;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: $colorTextPrimary;
+}
