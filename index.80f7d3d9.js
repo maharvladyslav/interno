@@ -1,0 +1,2 @@
+!function(){var e=document.querySelector("[data-menu]"),t=document.querySelector("[data-menu-btn]");document.querySelectorAll("[data-mobile-link]").forEach((function(n){n.addEventListener("click",(function(){e.classList.remove("is-open"),t.classList.remove("is-open")}))})),t.addEventListener("click",(function(){e.classList.toggle("is-open"),t.classList.toggle("is-open")}))}();
+//# sourceMappingURL=index.80f7d3d9.js.map
