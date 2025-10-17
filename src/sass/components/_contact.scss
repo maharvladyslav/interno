@@ -5,7 +5,7 @@
 .contact__container {
   background-color: $colorTextTitle;
   border-radius: 40px;
-  padding: 100px 0 95px;
+  padding: 100px 15px 95px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +28,7 @@
 .contact__subtext {
   color: $colorTextContrast;
   font-size: 28px;
+  text-align: center;
 }
 .contact__button {
   font-size: 28px;
@@ -38,11 +39,20 @@
   align-items: center;
   gap: 27px;
   border-radius: 18px;
+  &::after {
+    content: '';
+    width: 25px;
+    height: 36px;
+    background-image: url('../img/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
-.button__icon {
-  height: 36px;
-  width: 25px;
-}
+// .button__icon {
+//   height: 36px;
+//   width: 25px;
+// }
 
 // tablet-------------------
 @media screen and (min-width: 768px) {

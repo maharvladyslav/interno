@@ -9,7 +9,6 @@
 }
 .fields__content {
   max-height: 40px;
-  width: 370px;
   max-width: 370px;
   padding: 11px 12px;
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -55,7 +54,7 @@
   .fields__content {
     min-width: 448px;
   }
-  .fields__input {
-    min-width: 90%;
-  }
+  // .fields__input {
+  //   min-width: 90%;
+  // }
 }
