@@ -1,17 +1,92 @@
+// mobile-------------------
+.contact {
+  padding: 100px 0;
+}
 .contact__container {
   background-color: $colorTextTitle;
-  border-radius: 70px;
+  border-radius: 40px;
+  padding: 100px 15px 95px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+.contaact__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 .contact__title {
   font-family: $fontSecondary;
-  font-size: 50px;
+  font-size: 60px;
+  text-align: center;
   color: $colorTextContrast;
+  max-width: 550px;
 }
 .contact__subtext {
   color: $colorTextContrast;
+  font-size: 28px;
+  text-align: center;
 }
 .contact__button {
-  font-size: 18px;
+  font-size: 28px;
   color: $colorTextContrast;
   background-color: $colorAccent;
+  padding: 19px 15px 16px 34px;
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  border-radius: 18px;
+  &::after {
+    content: '';
+    width: 25px;
+    height: 36px;
+    background-image: url('../img/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+// .button__icon {
+//   height: 36px;
+//   width: 25px;
+// }
+
+// tablet-------------------
+@media screen and (min-width: 768px) {
+  .contact__container {
+    border-radius: 55px;
+    gap: 50px;
+  }
+  .contact__title {
+    font-size: 55px;
+    max-width: none;
+  }
+  .contact__subtext {
+    font-size: 24px;
+  }
+  .contact__button {
+    font-size: 24px;
+  }
+}
+// desktop-------------------
+@media screen and (min-width: 1024px) {
+  .contact__container {
+    border-radius: 70px;
+    gap: 31px;
+  }
+  .contaact__meta {
+    gap: 9px;
+  }
+  .contact__title {
+    font-size: 50px;
+  }
+  .contact__subtext {
+    font-size: 22px;
+  }
+  .contact__button {
+    font-size: 18px;
+  }
 }
