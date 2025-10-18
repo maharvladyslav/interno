@@ -1,0 +1,80 @@
+<section class="contact">
+  <div class="container contact__container">
+    <div class="contaact__meta">
+      <h2 class="contact__title">Wanna join the interno?</h2>
+      <p class="contact__subtext">Contact Us & Get a Free Consultation</p>
+    </div>
+    <button class="contact__button" type="button" data-modal-open>
+      Connect With us
+    </button>
+  </div>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="modal__btn-close" data-modal-close>
+        <!-- ---------- -->
+        <svg class="icon__close">
+          <use href="./img/form-icon.svg#icon-close" />
+        </svg>
+        <!-- ---------- -->
+      </button>
+      <h2 class="modal__title">
+        Leave your details, and we’ll get back to you.
+      </h2>
+      <form class="modal__form">
+        <div class="form__fields">
+          <!-- 01 -->
+          <div class="fields">
+            <label class="fields__label" for="name">Name</label>
+            <div class="fields__content">
+              <svg class="fields__icon">
+                <use href="./img/form-icon.svg#icon-person" />
+              </svg>
+              <input
+                class="fields__input"
+                id="name"
+                name="name"
+                type="text"
+                required
+                minlength="3"
+              />
+            </div>
+          </div>
+          <!-- 02 -->
+          <div class="fields">
+            <label class="fields__label" for="email">Email</label>
+            <div class="fields__content">
+              <svg class="fields__icon">
+                <use href="./img/form-icon.svg#icon-email" />
+              </svg>
+              <input
+                class="fields__input"
+                id="email"
+                name="email"
+                type="email"
+                required
+              />
+            </div>
+          </div>
+          <!-- 03 -->
+          <div class="fields">
+            <label class="fields__label" for="comment">Comment</label>
+            <div class="fields__content fields__content--comment">
+              <textarea
+                class="fields__comment"
+                name="comment"
+                id="comment"
+                placeholder="Enter text"
+                minlength="10"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal__meta">
+          <button class="modal__button" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section>

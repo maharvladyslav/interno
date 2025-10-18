@@ -1,0 +1,22 @@
+.estimate__container {
+  max-width: 450px;
+}
+.estimate__title {
+  color: $colorTextTitle;
+  line-height: 1.3;
+  font-size: 50px;
+  letter-spacing: 0.22;
+  font-family: $fontSecondary;
+}
+.estimate__text {
+  letter-spacing: 0.22;
+}
+.estimate__about,
+.estimate__tel {
+  font-size: 24px;
+}
+.estimate__button {
+  font-size: 18px;
+  color: $colorTextContrast;
+  background-color: $colorTextTitle;
+}
