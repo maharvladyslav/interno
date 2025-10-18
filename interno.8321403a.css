@@ -1,0 +1,2 @@
+body{background-color:#f4f4f4;margin:0;font-family:Georgia,Times New Roman,serif}.info-section{color:#fff;text-align:center;background-color:#c6996b;flex-wrap:wrap;justify-content:space-around;align-items:center;padding:80px 40px;display:flex}.info-box{flex:250px;margin:20px}.info-box h3{margin-bottom:20px;font-size:1.1rem;font-weight:700}.info-box p{font-size:1.2rem;font-weight:600;line-height:1.5}@media (width<=768px){.info-section{flex-direction:column;padding:60px 20px}.info-box{margin-bottom:40px}}
+/*# sourceMappingURL=interno.8321403a.css.map */
