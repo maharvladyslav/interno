@@ -21,20 +21,14 @@
   display: flex;
   gap: 20px;
 }
-.estimate__tel::before {
-  content: '';
-  width: 93px;
-  height: 93px;
-  padding-left: 93px;
+.estimate__g-mobil {
+  width: 34px;
+  height: 34px;
+  padding: 59px;
   background-color: $colorBgPrimary;
-  border-radius: 50%;
   fill: $colorAccent;
-  background-size: 34px 34px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(../images/estimate/mobil.svg);
+  border-radius: 50%;
 }
-
 .estimate__tel-text {
   font-size: 24px;
   display: flex;
@@ -53,15 +47,11 @@
   align-items: center;
   gap: 16px;
 }
-.estimate__button::after {
+.estimate__g-arrow {
   content: '';
   width: 26px;
   height: 36px;
-  background-repeat: no-repeat;
-  background-position: center;
   fill: $colorAccent;
-  background-size: contain;
-  background-image: url(../images/estimate/arrow.svg);
 }
 .estimate__photo {
   padding-top: 20px;
