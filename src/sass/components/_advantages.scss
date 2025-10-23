@@ -47,6 +47,15 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  transition: transform 250ms linear;
+}
+
+.advantages__link:hover::after {
+  transform: translateX(15px);
+}
+
+.advantages__link:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
