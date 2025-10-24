@@ -21,13 +21,24 @@
   display: flex;
   gap: 20px;
 }
-.estimate__g-mobil {
-  width: 34px;
-  height: 34px;
-  padding: 59px;
+.estimate__tel:hover {
+  fill: $colorTextQuotes;
+  transition: fill 0.5s ease-out;
+}
+.estimate__tel--background {
   background-color: $colorBgPrimary;
   fill: $colorAccent;
   border-radius: 50%;
+  width: 93px;
+  height: 93px;
+}
+.estimate__g-mobil {
+  width: 34px;
+  height: 34px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .estimate__tel-text {
   font-size: 24px;
@@ -47,8 +58,14 @@
   align-items: center;
   gap: 16px;
 }
+.estimate__button:hover {
+  fill: $colorBgPrimary;
+  color: $colorBgPrimary;
+  transition-timing-function: ease-out;
+  transition-duration: 0.5s;
+  transition-property: fill, color;
+}
 .estimate__g-arrow {
-  content: '';
   width: 26px;
   height: 36px;
   fill: $colorAccent;
