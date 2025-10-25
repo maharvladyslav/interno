@@ -4,6 +4,7 @@
 //   align-items: center;
 // }
 .recent-blogs__title {
+  padding-top: 143px;
   font-family: $fontSecondary;
   font-size: 35px;
   line-height: 62px;
@@ -34,13 +35,64 @@
   flex-wrap: wrap;
 }
 .recent-blogs__item {
-  flex-basis: calc((100% - 80px) / 1);
+  flex-basis: 100%;
   max-width: 380px;
 }
+
 .room {
   border: 1px solid $colorBorder;
   border-radius: 62px;
   background-color: $colorTextContrast;
+  transition: transform 0.5s ease;
+}
+.room:hover {
+  border: 1px solid $colorBorder;
+  border-radius: 62px;
+  background-color: #f4f0ec;
+  animation-name: card-animation;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  transform: translateY(-20px);
+  box-shadow: #292f36;
+  box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 1px 0 rgba(0, 0, 0, 0.1);
+}
+@keyframes card-animation {
+  0% {
+    background-color: #f4f0ec;
+  }
+  10% {
+    background-color: #ece9e6e1;
+  }
+  20% {
+    background-color: #e7e5e2ce;
+  }
+  30% {
+    background-color: #d8d6d38f;
+  }
+  40% {
+    background-color: #c9c6c38f;
+  }
+  50% {
+    background-color: #e7e3de56;
+  }
+  60% {
+    background-color: #c9c6c38f;
+  }
+  70% {
+    background-color: #d8d6d38f;
+  }
+  80% {
+    background-color: #e7e5e2ce;
+  }
+  90% {
+    background-color: #ece9e6e1;
+  }
+  100% {
+    background-color: #f4f0ec;
+  }
 }
 .room-photo {
   position: relative;
@@ -96,121 +148,51 @@
   width: 52px;
   height: 52px;
   background-color: $colorBgPrimary;
+  transition: transform 1s ease;
 }
+
+.room-date-img:hover {
+  transform: rotate(360deg);
+}
+
 @media (min-width: 786px) {
   .recent-blogs__title {
-    font-family: $fontSecondary;
     font-size: 40px;
-    line-height: 62px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #292f36;
-    margin-bottom: 21px;
   }
   .recent-blogs__subtitle {
     font-size: 15px;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-    text-align: center;
   }
   .recent-blogs__second-subtitle {
     font-size: 15px;
-    letter-spacing: 0.01em;
-    text-align: center;
-    margin-bottom: 71px;
   }
 
   .recent-blogs__item {
-    flex-basis: calc((100% - 80px) / 2);
-  }
-
-  .room-design {
-    position: absolute;
-    background-color: $colorTextContrast;
-    padding: 10px 15px;
-    font-size: 15px;
-    line-height: 24px;
-    border-radius: 8px 8px 8px 0;
-    bottom: 40px;
-    left: 10px;
+    flex-basis: calc((100% - 60px) / 2);
   }
   .room-description {
-    font-family: $fontSecondary;
     font-size: 22px;
-    line-height: 35px;
-    letter-spacing: 0.02em;
-    color: $colorTextTitle;
-    padding-left: 21px;
-    padding-right: 25px;
-    padding-bottom: 11px;
   }
-  .room-date-container {
-    padding-inline: 21px;
-    padding-bottom: 41px;
-    display: flex;
-    gap: 100px;
-    justify-content: center;
-    align-items: center;
-  }
+
   .room-date {
     font-size: 16px;
-    letter-spacing: 0.01em;
   }
 }
 
 @media (min-width: 1200px) {
   .recent-blogs__title {
-    font-family: $fontSecondary;
     font-size: 48px;
-    line-height: 62px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #292f36;
-    margin-bottom: 21px;
   }
   .recent-blogs__subtitle {
     font-size: 22px;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-    text-align: center;
   }
   .recent-blogs__second-subtitle {
     font-size: 22px;
-    letter-spacing: 0.01em;
-    text-align: center;
-    margin-bottom: 71px;
   }
   .recent-blogs__item {
     flex-basis: calc((100% - 80px) / 3);
   }
-  .room-photo {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-inline: 21px;
-    padding-top: 21px;
-    padding-bottom: 15px;
-  }
-  .room-design {
-    position: absolute;
-    background-color: $colorTextContrast;
-    padding: 10px;
-    font-size: 16px;
-    line-height: 24px;
-    border-radius: 8px 8px 8px 0;
-    bottom: 44px;
-    margin-left: 45px;
-  }
   .room-description {
-    font-family: $fontSecondary;
     font-size: 24px;
-    line-height: 35px;
-    letter-spacing: 0.02em;
-    color: $colorTextTitle;
-    padding-left: 21px;
-    padding-right: 32px;
-    padding-bottom: 11px;
   }
   .room-date-container {
     padding-inline: 21px;
@@ -222,15 +204,5 @@
   }
   .room-date {
     font-size: 16px;
-    letter-spacing: 0.01em;
-  }
-  .room-date-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    width: 52px;
-    height: 52px;
-    background-color: $colorBgPrimary;
   }
 }
