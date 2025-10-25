@@ -47,12 +47,22 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    transition-property: background-color, color;
+    transition-duration: 20s;
+    transition-timing-function: ease;
+  }
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  &:hover {
+    background-color: $colorTextQuotes;
+    color: $colorTextPrimary;
   }
 }
-// .button__icon {
-//   height: 36px;
-//   width: 25px;
-// }
+
+.contact__button:hover::after {
+  animation: contact-animation 1.2s ease-in-out infinite;
+}
 
 // tablet-------------------
 @media screen and (min-width: 768px) {
@@ -88,5 +98,14 @@
   }
   .contact__button {
     font-size: 18px;
+  }
+}
+
+@keyframes contact-animation {
+  20% {
+    transform: translateX(-6px);
+  }
+  60% {
+    transform: translateX(8px);
   }
 }
