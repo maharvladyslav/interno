@@ -1,60 +1,62 @@
-.award-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.award {
   background-color: $colorTextTitle;
   color: $colorAccent;
-  padding: 80px 100px;
-  box-sizing: border-box;
-  height: 461px;
+  padding: 80px 0;
 
- 
-  max-width: 1440px;
-  margin: 0 auto;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-  .left {
-    flex: 1;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  &__title {
     font-size: 32px;
     font-family: $fontSecondary;
     font-weight: bold;
     line-height: 1.3;
-    max-width: 500px;
+    margin: 0;
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s ease; // плавный переход
 
-    h2 {
-      margin: 0;
+    &:hover {
+      transform: scale(1.03); // лёгкое увеличение при наведении
     }
   }
 
-  .right {
-    flex: 1;
+  &__text {
     font-size: 14px;
     font-family: $fontPrimary;
     line-height: 1.7;
-    padding-left: 60px;
-    max-width: 600px;
-    color: $colorAccent;
+    margin: 0;
+    flex: 1;
+    min-width: 280px;
+    transition: transform 0.3s ease;
 
-    p {
-      margin: 0;
+    &:hover {
+      transform: scale(1.02);
     }
   }
-}
 
-@media (max-width: 768px) {
-  .award-section {
-    flex-direction: column;
-    padding: 60px 30px;
-    height: auto;
-    text-align: center;
-
-    .left,
-    .right {
-      padding: 0;
-      max-width: 100%;
+  @media (max-width: 768px) {
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 30px;
     }
 
-    .right {
-      margin-top: 30px;
+    &__title,
+    &__text {
+      max-width: 100%;
     }
   }
 }
