@@ -23,7 +23,17 @@
     </div>
 
     <div class="estimate__photo">
-      <img src="./images/estimate/mobil/estimate.jpg" alt="home" />
+      <picture>
+        <source 
+        srcset="./images/estimate/estimate_dektop.jpg 1x,
+                ./images/estimate/estimate_dektop@2x 2x"
+                media="min-width:768px">
+                <source 
+        srcset="./images/estimate/estimate_mobil.jpg 1x,
+                ./images/estimate/estimate_mobil@2x 2x"
+                media="max-width:767px">
+      </picture>
+      <img src="./images/estimate/mobil/estimate_desktop.jpg" alt="home" />
     </div>
   </div>
 </section>
