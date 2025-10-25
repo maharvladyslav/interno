@@ -14,6 +14,7 @@
     max-height: 100px;
     cursor: pointer;
   }
+
   .nav {
     display: flex;
     justify-content: flex-start;
@@ -23,12 +24,9 @@
   .nav__link {
     font-size: 50px;
     font-weight: 400;
-    font-family: 'Jost', sans-serif;
+    font-family: $fontPrimary;
     line-height: 1.57;
     $colorTextTitle: #292f36;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: ease;
     &:hover {
       color: $colorAccent;
     }
@@ -37,24 +35,20 @@
 @media (min-width: 768px) {
   .header {
     padding-top: 26px;
-    padding-bottom: 30px;
+    padding-bottom: 18px;
   }
   .header__container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
   }
+
   .logo {
     max-width: 177px;
     max-height: 50px;
-    cursor: pointer;
   }
   .nav {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: row;
   }
   .nav__list {
     display: flex;
@@ -63,15 +57,27 @@
   }
   .nav__link {
     font-size: 20px;
-    font-weight: 400;
-    font-family: 'Jost', sans-serif;
-    line-height: 1.57;
-    $colorTextTitle: #292f36;
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function: ease;
+    transition-timing-function: linear;
     &:hover {
       color: $colorAccent;
     }
+  }
+  .nav__link::before {
+    margin-left: auto;
+  }
+  .nav__link::after,
+  .nav__link::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: $colorAccent;
+    display: block;
+    transition: 0.5s;
+  }
+  .nav__link:hover::after,
+  .nav__link:hover::before {
+    width: 100%;
   }
 }
