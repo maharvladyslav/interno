@@ -1,11 +1,15 @@
 .comments {
-  padding-top: 95px;
-  padding-bottom: 105px;
   // padding-bottom: 88px;
-  background-color: $colorBgPrimary;
-  border-radius: 70px;
+
   margin-top: 125px;
   margin-bottom: 125px;
+}
+
+.comments__container {
+  background-color: $colorBgPrimary;
+  border-radius: 70px;
+  padding-top: 95px;
+  padding-bottom: 105px;
 }
 
 .comments__title {
@@ -14,7 +18,6 @@
   padding-bottom: 45px;
   text-align: center;
   font-family: $fontSecondary;
-
   color: $colorTextTitle;
 }
 
@@ -34,6 +37,13 @@
   display: block;
   background-color: $colorTextContrast;
   border-radius: 30px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.2s ease;
+}
+
+.comment:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .comment__img {
