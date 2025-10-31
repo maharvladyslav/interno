@@ -1,10 +1,22 @@
 .menu-btn {
+  // position: relative;
+  // display: block;
+  // z-index: 9;
+  // width: 30px;
+  // height: 30px;
+  // background: none;
   position: relative;
-  display: block;
-  z-index: 9;
   width: 30px;
   height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: 0.3s;
   background: none;
+  z-index: 9;
 }
 
 .menu-btn::before,
@@ -15,7 +27,8 @@
 .menu-btn__line,
 .menu-btn::after {
   width: 100%;
-  height: 2px;
+  height: 3px;
+  border-radius: 5px;
   background-color: #030303;
   position: absolute;
   left: 0;
@@ -36,7 +49,7 @@
 .menu-btn.is-open {
   &::before {
     top: calc(50% - 1px);
-    transform: rotate(0deg);
+    transform: rotate(-45deg);
   }
   .menu-btn__line {
     transform-origin: top;
@@ -44,7 +57,7 @@
   }
   &::after {
     top: calc(50% - 1px);
-    transform: rotate(90deg);
+    transform: rotate(45deg);
   }
 }
 
