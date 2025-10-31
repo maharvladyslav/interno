@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Interno</title><link rel=stylesheet href=/interno/interno.8321403a.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Jost&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/interno/interno.fdc95281.css><script type=module src=/interno/interno.70f45e20.js></script><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Interno</title><link rel=stylesheet href=/interno/interno.8321403a.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Jost&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/interno/interno.d628d5cf.css><script type=module src=/interno/interno.70f45e20.js></script><body>
     
     
     <header class=header>
@@ -76,15 +76,29 @@
         greater opportunities. We have an insatiable curiosity about
         transformative trends challenging the status.
       </p>
-      <div class=estimate__nav>
-        <a class=estimate__tel href=#>012345678</a>
-        <p class=estimate__about>Call Us Anytime</p>
-      </div>
-      <button class="button estimate__button">Get Free Estimate</button>
+      <a href=tel:012345678 class=estimate__tel>
+        <span class=estimate__tel--background>
+          <svg class=estimate__g-mobil><use href=/interno/icons-esetimate.c5b0f01c.svg#icon-mobile /></svg>
+        </span>
+
+        <p class=estimate__tel-text>
+          01234567<span class=estimate__tel-text>Call Us Anytime </span>
+        </p>
+      </a>
+      <button class="button estimate__button">
+        Get Free Estimate
+        <svg class=estimate__g-arrow><use href=/interno/icons-esetimate.c5b0f01c.svg#icon-arrow /></svg>
+      </button>
     </div>
 
     <div class=estimate__photo>
-      <img src=/interno/estimate.ab530e20.jpg alt=home>
+      <picture>
+        <source srcset="/interno/estimate_desktop.44551d35.webp 1x,/interno/estimate_desktop@2x.c8df494a.webp 2x" media=(min-width:768px)>
+        <source srcset="/interno/estimate_desktop.29c2adb6.jpg 1x,/interno/estimate_desktop@2x.83496f24.jpg 2x" media=(min-width:768px)>
+        <source srcset="/interno/estimate_mobil.fa99e69a.webp 1x,/interno/estimate_mobil@2x.c1a95556.webp 2x" media=(max-width:767px)>
+        <source srcset="/interno/estimate_mobil.5a7af690.jpg 1x,/interno/estimate_mobil@2x.2f13adc9.jpg 2x" media=(max-width:767px)>
+        <img src=/interno/estimate_desktop.29c2adb6.jpg alt=home>
+      </picture>
     </div>
   </div>
 </section>
