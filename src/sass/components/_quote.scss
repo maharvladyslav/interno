@@ -1,13 +1,111 @@
 .quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
   color: $colorTextQuotes;
-}
-.quote__text {
-  font-size: 24px;
-  line-height: 133%;
-  text-align: center;
+  &::before {
+    content: '';
+    background-image: url(../img/quote-green.webp);
+    width: 72px;
+    height: 62px;
+    margin-top: 40px;
+    animation: swing 1.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    transform-origin: center top;
+  }
+  &__first::before {
+    content: '';
+    background-image: url(../img/quote-orange.webp);
+    width: 72px;
+    height: 62px;
+  }
+
+  &__first::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 170px;
+    height: 2px;
+    background-color: $colorAccent;
+  }
 }
 
-.quote__text--small {
-  font-size: 23px;
-  line-height: 139%;
+@media (min-width: 768px) {
+  .quote {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    &__first::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 2px;
+      height: 394px;
+
+      background-color: $colorAccent;
+    }
+  }
+
+  .quote__text {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .quote {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    gap: 48px;
+
+    &__text {
+      font-size: 24px;
+
+      text-align: center;
+      min-width: 461px;
+    }
+
+    &__text--small {
+      font-size: 23px;
+
+      min-width: 409px;
+    }
+    &__photo {
+      width: 140px;
+      height: 37px;
+    }
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(1deg);
+  }
+
+  80% {
+    transform: rotate(-8deg);
+  }
+}
+
+.quote__text {
+  animation: glow 1s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 0 transparent;
+  }
+  50% {
+    text-shadow: 0 0 1px rgba(255, 12, 12, 0.471);
+  }
+  100% {
+    text-shadow: 0 0 0 transparent;
+  }
 }

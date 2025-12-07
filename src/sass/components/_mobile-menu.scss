@@ -1,4 +1,7 @@
 @media (max-width: 767px) {
+  .mobile-menu {
+    z-index: 999;
+  }
   .mobile-menu__wrapp {
     display: flex;
     flex-direction: column;

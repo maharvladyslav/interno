@@ -7,15 +7,57 @@
         greater opportunities. We have an insatiable curiosity about
         transformative trends challenging the status.
       </p>
-      <div class="estimate__nav">
-        <a class="estimate__tel" href="#">012345678</a>
-        <p class="estimate__about">Call Us Anytime</p>
-      </div>
-      <button class="button estimate__button">Get Free Estimate</button>
+      <a href="tel:012345678" class="estimate__tel">
+        <span class="estimate__tel--background">
+          <svg class="estimate__g-mobil">
+            <use href="./images/estimate/icons-esetimate.svg#icon-mobile"></use>
+          </svg>
+        </span>
+
+        <p class="estimate__tel-text">
+          01234567<span class="estimate__tel-text">Call Us Anytime </span>
+        </p>
+      </a>
+      <button class="button estimate__button">
+        Get Free Estimate
+        <svg class="estimate__g-arrow">
+          <use href="./images/estimate/icons-esetimate.svg#icon-arrow"></use>
+        </svg>
+      </button>
     </div>
 
     <div class="estimate__photo">
-      <img src="./images/laptop_tablet/estimate.jpg" alt="home" />
+      <picture>
+        <source
+          srcset="
+            ./images/estimate/estimate_desktop.webp    1x,
+            ./images/estimate/estimate_desktop@2x.webp 2x
+          "
+          media="(min-width:768px)"
+        />
+        <source
+          srcset="
+            ./images/estimate/estimate_desktop.jpg    1x,
+            ./images/estimate/estimate_desktop@2x.jpg 2x
+          "
+          media="(min-width:768px)"
+        />
+        <source
+          srcset="
+            ./images/estimate/estimate_mobil.webp    1x,
+            ./images/estimate/estimate_mobil@2x.webp 2x
+          "
+          media="(max-width:767px)"
+        />
+        <source
+          srcset="
+            ./images/estimate/estimate_mobil.jpg    1x,
+            ./images/estimate/estimate_mobil@2x.jpg 2x
+          "
+          media="(max-width:767px)"
+        />
+        <img src="./images/estimate/estimate_desktop.jpg" alt="home" />
+      </picture>
     </div>
   </div>
 </section>

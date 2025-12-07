@@ -1,20 +1,29 @@
 <section class="quotes">
   <div class="quotes__container container">
-    <div class="quote">
-      <div class="quote__photo">
-        <img src="./img/quote-orange.webp" alt="quote" class="quote__img" />
-      </div>
-      <p class="quote__text">
+    <div class="quote quote__first">
+      <blockquote class="quote__text reveal">
         "We will continue to benefit from our house without having to physically
         live in it
-      </p>
+      </blockquote>
       <div class="authors">
         <div class="authors__photo">
-          <img
-            src="./img/authors.webp"
-            alt="Jason & Stormi U."
-            class="authors__img"
-          />
+          <picture>
+            <source
+              srcset="./img/authors.webp 1x, ./img/authors@2x.webp 2x"
+              type="image/webp"
+            />
+
+            <source
+              srcset="./img/authors.png 1x, ./img/authors@2x.png 2x"
+              type="image/png"
+            />
+
+            <img
+              src="./img/authors.webp"
+              alt="Jason & Stormi U."
+              class="authors__img"
+            />
+          </picture>
         </div>
         <div class="authors__names">
           <p class="authors__text">Jason & Stormi U.</p>
@@ -24,16 +33,29 @@
     </div>
 
     <div class="quote">
-      <div class="quote__photo">
-        <img src="./img/quote-green.webp" alt="quote" class="quote__img" />
-      </div>
-      <p class="quote__text quote__text--small">
+      <blockquote class="quote__text quote__text--small reveal">
         “Real estate is a tangible investment.” It's one of the easiest assets
         to
-      </p>
+      </blockquote>
 
       <div class="quote__photo">
-        <img src="./img/forbes.webp" alt="Forbes" class="quote__img quote__img--forbes" />
+        <picture>
+          <source
+            srcset="./img/forbes.webp 1x, ./img/forbes@2x.webp 2x"
+            type="image/webp"
+          />
+
+          <source
+            srcset="./img/forbes.png 1x, ./img/forbes@2x.png 2x"
+            type="image/png"
+          />
+
+          <img
+            src="./img/forbes.webp"
+            alt="Forbes"
+            class="quote__img quote__img--forbes"
+          />
+        </picture>
       </div>
     </div>
   </div>
